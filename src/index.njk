@@ -1,0 +1,201 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languageCodes
+  size: 1
+  alias: langCode
+  addAllPagesToCollections: true
+bodyClass: home
+ogImage: /assets/media/2021/08/image-edited.jpeg
+permalink: "{{ '/' if langCode == 'en' else '/sl/' }}"
+eleventyComputed:
+  title: "{{ localizedSite[langCode].name }}"
+  description: "{{ localizedSite[langCode].description }}"
+  ogImageAlt: "{{ localizedSite[langCode].defaultImageAlt }}"
+  canonicalPath: "{{ '/' if langCode == 'en' else '/sl/' }}"
+  englishPath: "/"
+  slovenianPath: "/sl/"
+---
+{% set homeNetwork = localizedNetwork[langCode] %}
+<section class="home-hero">
+  <div class="shell home-hero__grid">
+    <div class="home-hero__copy">
+      <p class="eyebrow">{{ 'Long-term research · lasting insight' | t(langCode, 'home.hero.eyebrow') }}</p>
+      <h1>{{ 'Watching ecosystems change,' | t(langCode, 'home.hero.headline') }} <em>{{ 'over time.' | t(langCode, 'home.hero.headlineEmphasis') }}</em></h1>
+      <p class="home-hero__lede">{{ 'Slovenia’s national network for place-based ecosystem and socio-ecological research—from the deep karst underground to forests, lakes and the Adriatic Sea.' | t(langCode, 'home.hero.lede') }}</p>
+      <div class="button-row">
+        <a class="button" href="{{ '/sites-2/' | localeUrl(langCode) | url }}">{{ 'Explore 16 research sites' | t(langCode, 'home.hero.exploreSites') }} {% icon "arrow", "icon--small" %}</a>
+        <a class="button button--quiet" href="{{ '/lter-slovenia/' | localeUrl(langCode) | url }}">{{ 'Meet the network' | t(langCode, 'home.hero.meetNetwork') }}</a>
+      </div>
+      <dl class="hero-stats">
+        {% for stat in homeNetwork.stats %}
+          <div><dt>{{ stat.value }}</dt><dd>{{ stat.label }}</dd></div>
+        {% endfor %}
+      </dl>
+    </div>
+
+    <div class="home-hero__visual">
+      <figure class="hero-image hero-image--main">
+        <img src="{{ '/assets/media/2021/08/image-edited.jpeg' | url }}" alt="{{ 'Illuminated footbridge crossing a cavern in the Škocjan Caves' | t(langCode, 'home.hero.mainImageAlt') }}" width="800" height="799">
+      </figure>
+      <figure class="hero-image hero-image--inset">
+        <img src="{{ '/assets/media/2021/06/Plan.jpg' | url }}" alt="{{ 'Woodland and karst landscape near Planina' | t(langCode, 'home.hero.insetImageAlt') }}" width="800" height="533">
+      </figure>
+      <div class="hero-coordinate" aria-hidden="true">
+        <span>46.1512° N</span><i></i><span>14.9955° E</span>
+      </div>
+      <p class="hero-image__caption"><span>01</span> {{ 'Škocjan Caves · Slovenia' | t(langCode, 'home.hero.imageCaption') }}</p>
+    </div>
+  </div>
+  <div class="home-hero__line" aria-hidden="true"></div>
+</section>
+
+<section class="mission-strip">
+  <div class="shell mission-strip__grid">
+    <p class="eyebrow">{{ 'Our purpose' | t(langCode, 'home.mission.eyebrow') }}</p>
+    <div>
+      <p class="mission-strip__statement">{{ 'In order to pool resources in Slovenia in the field of socio-ecological research, and to promote international networking, we have inaugurated the LTER Slovenia project.' | t(langCode, 'home.mission.statement') }}</p>
+      <p class="mission-strip__context">{{ 'This is a group of several institutions with support from the Ministry of Higher Education, Science and Innovation of the Republic of Slovenia. Our mission in brief is to be the main coordinating body for networked socio-ecological research in Slovenia, which entails both running our own research program and coordinating our research with partners abroad.' | t(langCode, 'home.mission.context') }}</p>
+      <a class="text-link" href="https://doi.org/10.3986/ac.v53i2-3.13535" target="_blank" rel="noopener">{{ 'More than 20 years of LTER Slovenia' | t(langCode, 'home.mission.moreThanTwentyYears') }} {% icon "external", "icon--small" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="ecosystem-band" aria-labelledby="ecosystem-title">
+  <div class="shell">
+    <div class="section-heading section-heading--split">
+      <div>
+        <p class="eyebrow">{{ 'A whole-system view' | t(langCode, 'home.ecosystems.eyebrow') }}</p>
+        <h2 id="ecosystem-title">{{ 'One network. Four ecosystem realms.' | t(langCode, 'home.ecosystems.title') }}</h2>
+      </div>
+      <p>{{ 'Sixteen research sites support long-term investigations of biodiversity and ecosystem processes across space and time.' | t(langCode, 'home.ecosystems.summary') }}</p>
+    </div>
+    <div class="realm-grid">
+      <a class="realm-card realm-card--karst" href="{{ '/sites-2/' | localeUrl(langCode) | url }}#sites">
+        <span class="realm-card__number">02</span>
+        {% icon "map" %}
+        <h3>{{ 'Underground karst' | t(langCode, 'network.realms.undergroundKarst.label') }}</h3>
+        <p>{{ 'Cave systems of exceptional biodiversity and global importance.' | t(langCode, 'network.realms.undergroundKarst.description') }}</p>
+      </a>
+      <a class="realm-card realm-card--forest" href="{{ '/sites-2/' | localeUrl(langCode) | url }}#sites">
+        <span class="realm-card__number">11</span>
+        {% icon "leaf" %}
+        <h3>{{ 'Forest platforms' | t(langCode, 'network.realms.forestPlatforms.label') }}</h3>
+        <p>{{ 'Terrestrial observation across Slovenia’s varied forest landscapes.' | t(langCode, 'network.realms.forestPlatforms.description') }}</p>
+      </a>
+      <a class="realm-card realm-card--water" href="{{ '/sites-2/' | localeUrl(langCode) | url }}#sites">
+        <span class="realm-card__number">02</span>
+        {% icon "microscope" %}
+        <h3>{{ 'Freshwater lakes' | t(langCode, 'network.realms.freshwaterLakes.label') }}</h3>
+        <p>{{ 'Long-term change in two distinct lake ecosystems.' | t(langCode, 'network.realms.freshwaterLakes.description') }}</p>
+      </a>
+      <a class="realm-card realm-card--marine" href="{{ '/sites-2/' | localeUrl(langCode) | url }}#sites">
+        <span class="realm-card__number">01</span>
+        {% icon "users" %}
+        <h3>{{ 'Marine site' | t(langCode, 'network.realms.marineSite.label') }}</h3>
+        <p>{{ 'Coastal observation in the Gulf of Trieste.' | t(langCode, 'network.realms.marineSite.description') }}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section featured-sites" id="sites">
+  <div class="shell">
+    <div class="section-heading section-heading--split">
+      <div>
+        <p class="eyebrow">{{ 'Research in place' | t(langCode, 'home.featuredSites.eyebrow') }}</p>
+        <h2>{{ 'Meet the landscapes behind the data.' | t(langCode, 'home.featuredSites.title') }}</h2>
+      </div>
+      <a class="text-link" href="{{ '/sites-2/' | localeUrl(langCode) | url }}">{{ 'View all 16 sites' | t(langCode, 'home.featuredSites.viewAll') }} {% icon "arrow", "icon--small" %}</a>
+    </div>
+    <div class="featured-site-grid">
+      {% for researchSite in homeNetwork.sites %}
+        {% if loop.index <= 4 %}
+          <a class="featured-site" href="{{ researchSite.url }}" target="_blank" rel="noopener">
+            <img src="{{ researchSite.image | url }}" alt="{{ researchSite.name + ' research site' if langCode == 'en' else 'Raziskovalno območje ' + researchSite.name }}" loading="lazy" width="800" height="800">
+            <div>
+              <p>{{ researchSite.ecosystem }}</p>
+              <h3>{{ researchSite.name }}</h3>
+              {% icon "external", "icon--small" %}
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="story-feature">
+  <div class="shell story-feature__grid">
+    <div class="story-feature__media">
+      <img src="{{ '/assets/media/2022/10/1920-1080-max.jpg' | url }}" alt="{{ 'Film title card: Karst research at LTER Slovenia sites' | t(langCode, 'home.fieldStory.imageAlt') }}" loading="lazy" width="1920" height="1080">
+      <span>{{ 'Field story' | t(langCode, 'home.fieldStory.label') }}</span>
+    </div>
+    <div class="story-feature__copy">
+      <p class="eyebrow eyebrow--light">{{ 'Karst research' | t(langCode, 'home.fieldStory.eyebrow') }}</p>
+      <h2>{{ 'Valuable data from a vulnerable world.' | t(langCode, 'home.fieldStory.title') }}</h2>
+      <p>{{ 'Karst regions are rich in biodiversity and vital as drinking-water reservoirs. Collecting long-term data there can be difficult, time-consuming and sometimes life-threatening—which makes every observation count.' | t(langCode, 'home.fieldStory.summary') }}</p>
+      <a class="button button--light" href="{{ '/karst-research-at-lter-slovenia-sites/' | localeUrl(langCode) | url }}">{{ 'Read the field story' | t(langCode, 'home.fieldStory.read') }} {% icon "arrow", "icon--small" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section film-section">
+  <div class="shell film-section__grid">
+    <div class="film-section__copy">
+      <p class="eyebrow">{{ 'Watch' | t(langCode, 'home.film.eyebrow') }}</p>
+      <h2>{{ 'Karst research at LTER Slovenia sites' | t(langCode, 'home.film.title') }}</h2>
+      <p>{{ 'The film presents the Postojna–Planina Cave System and Škocjan Caves, two sites managed for long-term underground karst research.' | t(langCode, 'home.film.summary') }}</p>
+      <p class="film-section__credit">{{ 'Produced and co-financed by the Karst Research Institute ZRC SAZU under the EU Horizon 2020 eLTER PPP and eLTER PLUS projects.' | t(langCode, 'home.film.credit') }}</p>
+    </div>
+    <div class="video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/qk2kq5y_nek" title="{{ 'Karst research at LTER Slovenia sites' | t(langCode, 'home.film.iframeTitle') }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="archive-callout">
+  <div class="shell archive-callout__grid">
+    <div>
+      <p class="eyebrow">{{ 'Past event · June 2025' | t(langCode, 'home.pastEvent.eyebrow') }}</p>
+      <h2>{{ 'eLTER Science Conference 2025' | t(langCode, 'home.pastEvent.title') }}</h2>
+      <p>{{ 'Towards a whole-system approach for ecosystem science · Tampere, Finland' | t(langCode, 'home.pastEvent.summary') }}</p>
+      <a class="text-link" href="https://elter-ri.eu/science-conference#intro" target="_blank" rel="noopener">{{ 'View the conference' | t(langCode, 'home.pastEvent.viewConference') }} {% icon "external", "icon--small" %}</a>
+    </div>
+    <a class="archive-callout__image" href="https://elter-ri.eu/science-conference#intro" target="_blank" rel="noopener">
+      <img src="{{ '/assets/media/2025/02/image001.jpg' | url }}" alt="{{ 'eLTER Science Conference 2025, 23–27 June in Tampere, Finland' | t(langCode, 'home.pastEvent.imageAlt') }}" loading="lazy" width="990" height="275">
+    </a>
+  </div>
+</section>
+
+<section class="section field-gallery" aria-labelledby="gallery-title">
+  <div class="shell">
+    <div class="section-heading section-heading--split">
+      <div>
+        <p class="eyebrow">{{ 'Seen in the field' | t(langCode, 'home.gallery.eyebrow') }}</p>
+        <h2 id="gallery-title">{{ 'Life, above and below the surface.' | t(langCode, 'home.gallery.title') }}</h2>
+      </div>
+      <p>{{ 'Long-term observation connects species, habitats and environmental processes that are otherwise easy to miss.' | t(langCode, 'home.gallery.summary') }}</p>
+    </div>
+    <div class="photo-grid">
+      {% for photo in homeNetwork.gallery %}
+        <figure class="photo-grid__item photo-grid__item--{{ loop.index }}">
+          <img src="{{ photo.image | url }}" alt="{{ photo.alt }}" loading="lazy" width="{{ photo.width }}" height="{{ photo.height }}">
+          <figcaption><span>0{{ loop.index }}</span>{{ photo.alt }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="shell home-cta__inner">
+    <p class="eyebrow eyebrow--light">{{ 'Connect with the network' | t(langCode, 'home.callToAction.eyebrow') }}</p>
+    <h2>{{ 'Long-term questions need long-term collaboration.' | t(langCode, 'home.callToAction.title') }}</h2>
+    <p>{{ 'Discover the consortium, explore research outputs or speak with the national representative.' | t(langCode, 'home.callToAction.summary') }}</p>
+    <div class="button-row">
+      <a class="button button--light" href="{{ '/consortium/' | localeUrl(langCode) | url }}">{{ 'Meet our partners' | t(langCode, 'home.callToAction.meetPartners') }} {% icon "arrow", "icon--small" %}</a>
+      <a class="button button--outline-light" href="{{ '/contact/' | localeUrl(langCode) | url }}">{{ 'Contact LTER Slovenia' | t(langCode, 'home.callToAction.contact') }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+pagination:
+  data: languageCodes
+  size: 1
+  alias: langCode
+permalink: "{{ '/feed.xml' if langCode == 'en' else '/sl/feed.xml' }}"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ langCode }}">
+  <title>{{ localizedSite[langCode].name }}</title>
+  <subtitle>{{ "News from Slovenia’s long-term ecosystem research network." if langCode == "en" else "Novice slovenskega omrežja za dolgoročne ekološke raziskave." }}</subtitle>
+  <id>{{ site.url }}{{ '/' if langCode == 'en' else '/sl/' }}</id>
+  <link href="{{ site.url }}{{ '/feed.xml' if langCode == 'en' else '/sl/feed.xml' }}" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}{{ '/' if langCode == 'en' else '/sl/' }}" rel="alternate" type="text/html" />
+  <updated>{{ source.latestPostModifiedAt }}</updated>
+  <author>
+    <name>{{ localizedSite[langCode].name }}</name>
+  </author>
+{%- for item in localizedPages %}
+  {%- if item.type == "post" and item.langCode == langCode %}
+  <entry>
+    <title>{{ item.title | escape }}</title>
+    <id>{{ site.url }}{{ item.route }}</id>
+    <link href="{{ site.url }}{{ item.route }}" rel="alternate" type="text/html" />
+    <published>{{ item.date }}Z</published>
+    <updated>{{ item.modified }}Z</updated>
+    <summary type="html">{{ item.excerpt | escape }}</summary>
+  </entry>
+  {%- endif %}
+{%- endfor %}
+</feed>

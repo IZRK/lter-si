@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languageCodes
+  size: 1
+  alias: langCode
+permalink: "{{ '/category/lter-slovenia/' if langCode == 'en' else '/sl/category/lter-slovenia/' }}"
+bodyClass: page archive-page
+eleventyComputed:
+  title: "{{ 'LTER Slovenia stories' | t(langCode, 'categoryArchive.title') }}"
+  description: "{{ 'Field stories and updates from the LTER Slovenia research network.' | t(langCode, 'categoryArchive.description') }}"
+  canonicalPath: "{{ '/category/lter-slovenia/' if langCode == 'en' else '/sl/category/lter-slovenia/' }}"
+  englishPath: "/category/lter-slovenia/"
+  slovenianPath: "/sl/category/lter-slovenia/"
+---
+<header class="page-hero page-hero--compact">
+  <div class="shell page-hero__inner">
+    <div class="page-hero__copy">
+      <nav class="breadcrumbs" aria-label="{{ 'Breadcrumb' | t(langCode, 'common.breadcrumbAriaLabel') }}"><a href="{{ '/' | localeUrl(langCode) }}">{{ 'Home' | t(langCode, 'common.home') }}</a><span aria-hidden="true">/</span><span>{{ 'Stories' | t(langCode, 'categoryArchive.breadcrumbSection') }}</span></nav>
+      <p class="eyebrow eyebrow--light">{{ 'Field notes' | t(langCode, 'categoryArchive.eyebrow') }}</p>
+      <h1>{{ 'LTER Slovenia stories' | t(langCode, 'categoryArchive.title') }}</h1>
+      <p class="page-hero__summary">{{ 'Field notes and research stories from across the network.' | t(langCode, 'categoryArchive.summary') }}</p>
+    </div>
+  </div>
+</header>
+<section class="section">
+  <div class="shell archive-card-grid">
+    {% for archiveItem in localizedPages %}{% if archiveItem.type == "post" and archiveItem.langCode == langCode %}
+      <article class="story-card">
+        <a class="story-card__image" href="{{ archiveItem.route }}"><img src="{{ archiveItem.featuredImage }}" alt="{{ archiveItem.title }}" width="1920" height="1080"></a>
+        <div class="story-card__body">
+          <p class="eyebrow">{{ archiveItem.date | readableDate(langCode) }}</p>
+          <h2><a href="{{ archiveItem.route }}">{{ archiveItem.title }}</a></h2>
+          <p>{{ archiveItem.excerpt }}</p>
+          <a class="text-link" href="{{ archiveItem.route }}">{{ 'Read story' | t(langCode, 'categoryArchive.readStory') }} {% icon "arrow", "icon--small" %}</a>
+        </div>
+      </article>
+    {% endif %}{% endfor %}
+  </div>
+</section>

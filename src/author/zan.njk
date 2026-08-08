@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languageCodes
+  size: 1
+  alias: langCode
+permalink: "{{ '/author/zan/' if langCode == 'en' else '/sl/author/zan/' }}"
+bodyClass: page archive-page
+robots: noindex, follow
+eleventyComputed:
+  title: "{{ 'Posts by Žan Kafol' | t(langCode, 'authorArchive.title') }}"
+  description: "{{ 'Research stories contributed by Žan Kafol to LTER Slovenia.' | t(langCode, 'authorArchive.description') }}"
+  canonicalPath: "{{ '/category/lter-slovenia/' if langCode == 'en' else '/sl/category/lter-slovenia/' }}"
+  englishPath: "/author/zan/"
+  slovenianPath: "/sl/author/zan/"
+---
+<header class="page-hero page-hero--compact">
+  <div class="shell page-hero__inner">
+    <div class="page-hero__copy">
+      <nav class="breadcrumbs" aria-label="{{ 'Breadcrumb' | t(langCode, 'common.breadcrumbAriaLabel') }}"><a href="{{ '/' | localeUrl(langCode) }}">{{ 'Home' | t(langCode, 'common.home') }}</a><span aria-hidden="true">/</span><span>{{ 'Authors' | t(langCode, 'authorArchive.breadcrumbSection') }}</span></nav>
+      <p class="eyebrow eyebrow--light">{{ 'Research contributor' | t(langCode, 'authorArchive.eyebrow') }}</p>
+      <h1>Žan Kafol</h1>
+      <p class="page-hero__summary">{{ 'Research stories contributed to LTER Slovenia.' | t(langCode, 'authorArchive.summary') }}</p>
+    </div>
+  </div>
+</header>
+<section class="section">
+  <div class="shell archive-card-grid">
+    {% for archiveItem in localizedPages %}{% if archiveItem.type == "post" and archiveItem.langCode == langCode %}
+      <article class="story-card">
+        <a class="story-card__image" href="{{ archiveItem.route }}"><img src="{{ archiveItem.featuredImage }}" alt="{{ archiveItem.title }}" width="1920" height="1080"></a>
+        <div class="story-card__body">
+          <p class="eyebrow">{{ archiveItem.date | readableDate(langCode) }}</p>
+          <h2><a href="{{ archiveItem.route }}">{{ archiveItem.title }}</a></h2>
+          <p>{{ archiveItem.excerpt }}</p>
+          <a class="text-link" href="{{ archiveItem.route }}">{{ 'Read story' | t(langCode, 'authorArchive.readStory') }} {% icon "arrow", "icon--small" %}</a>
+        </div>
+      </article>
+    {% endif %}{% endfor %}
+  </div>
+</section>

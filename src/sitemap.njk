@@ -1,0 +1,43 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for sourceItem in sourceContent %}
+{%- if sourceItem.route == "/" %}
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ sourceItem.modified }}Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="{{ site.url }}/sl/" />
+  </url>
+  <url>
+    <loc>{{ site.url }}/sl/</loc>
+    <lastmod>{{ sourceItem.modified }}Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="{{ site.url }}/sl/" />
+  </url>
+{%- endif %}
+{%- endfor %}
+{%- for item in localizedPages %}
+{%- if not site.aliasTargets[item.slug] %}
+  <url>
+    <loc>{{ site.url }}{{ item.route }}</loc>
+    <lastmod>{{ item.modified }}Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ item.englishPath }}" />
+    <xhtml:link rel="alternate" hreflang="sl" href="{{ site.url }}{{ item.slovenianPath }}" />
+  </url>
+{%- endif %}
+{%- endfor %}
+  <url>
+    <loc>{{ site.url }}/category/lter-slovenia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/category/lter-slovenia/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="{{ site.url }}/sl/category/lter-slovenia/" />
+  </url>
+  <url>
+    <loc>{{ site.url }}/sl/category/lter-slovenia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/category/lter-slovenia/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="{{ site.url }}/sl/category/lter-slovenia/" />
+  </url>
+</urlset>

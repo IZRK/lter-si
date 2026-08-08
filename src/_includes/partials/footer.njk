@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-intro">
+      <a class="footer-brand" href="{{ '/' | localeUrl(activeLang) | url }}">
+        <span class="footer-brand__mark" aria-hidden="true">LTER</span>
+        <span>{{ 'Slovenia' | t(activeLang, 'footer.brandCountry') }}</span>
+      </a>
+      <p>{{ activeSite.description }}</p>
+      <a class="text-link text-link--light" href="{{ '/lter-slovenia/' | localeUrl(activeLang) | url }}">
+        {{ 'About the network' | t(activeLang, 'footer.aboutNetwork') }} {% icon "arrow", "icon--small" %}
+      </a>
+    </div>
+
+    <div class="footer-column">
+      <h2>{{ 'Explore' | t(activeLang, 'footer.exploreHeading') }}</h2>
+      <ul role="list">
+        <li><a href="{{ '/sites-2/' | localeUrl(activeLang) | url }}">{{ 'Research sites' | t(activeLang, 'footer.researchSites') }}</a></li>
+        <li><a href="{{ '/research/' | localeUrl(activeLang) | url }}">{{ 'Research' | t(activeLang, 'footer.research') }}</a></li>
+        <li><a href="{{ '/publications/' | localeUrl(activeLang) | url }}">{{ 'Publications' | t(activeLang, 'footer.publications') }}</a></li>
+        <li><a href="{{ '/projects/' | localeUrl(activeLang) | url }}">{{ 'European projects' | t(activeLang, 'footer.europeanProjects') }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h2>{{ 'Network' | t(activeLang, 'footer.networkHeading') }}</h2>
+      <ul role="list">
+        <li><a href="{{ '/consortium/' | localeUrl(activeLang) | url }}">{{ 'Consortium' | t(activeLang, 'footer.consortium') }}</a></li>
+        <li><a href="{{ '/ta-ra-access-scheme/' | localeUrl(activeLang) | url }}">{{ 'Access scheme' | t(activeLang, 'footer.accessScheme') }}</a></li>
+        <li><a href="{{ '/news-events/' | localeUrl(activeLang) | url }}">{{ 'News' | t(activeLang, 'footer.news') }}</a></li>
+        <li><a href="{{ '/events/' | localeUrl(activeLang) | url }}">{{ 'Events' | t(activeLang, 'footer.events') }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <h2>{{ 'Contact' | t(activeLang, 'footer.contactHeading') }}</h2>
+      <p>{{ activeSite.contact.name }}<br><span>{{ activeSite.contact.role }}</span></p>
+      <a href="mailto:{{ activeSite.contact.email }}">{{ activeSite.contact.email }}</a>
+      <a href="tel:{{ activeSite.contact.phone | replace(' ', '') }}">{{ activeSite.contact.phoneDisplay }}</a>
+    </div>
+  </div>
+  <div class="shell footer-meta">
+    <p>© {{ activeSite.currentYear }} {{ activeSite.name }}</p>
+    <a href="{{ ('/feed.xml' if activeLang == 'en' else '/sl/feed.xml') | url }}">{{ 'Feed' | t(activeLang, 'footer.feed') }}</a>
+  </div>
+</footer>

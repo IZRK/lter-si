@@ -1,0 +1,217 @@
+{
+  "source": "https://lter.zrc-sazu.si",
+  "retrievedAt": "2026-08-08T17:40:22.587Z",
+  "latestPostModifiedAt": "2022-10-25T09:13:03Z",
+  "totals": {
+    "pages": 23,
+    "posts": 1,
+    "assets": 41
+  },
+  "assets": [
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/03/2869-1024-Slovenia.png",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/03/2869-1024-Slovenia.png",
+      "local": "/assets/media/2022/03/2869-1024-Slovenia.png"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-edited.jpeg",
+      "local": "/assets/media/2021/08/image-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/cropped-cropped-cropped-LTER-Slovenia-1-192x192.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/cropped-cropped-cropped-LTER-Slovenia-1-192x192.jpg",
+      "local": "/assets/media/2021/06/cropped-cropped-cropped-LTER-Slovenia-1-192x192.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/10/1920-1080-max.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/10/1920-1080-max.jpg",
+      "local": "/assets/media/2022/10/1920-1080-max.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2024/01/slika.png",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2024/01/slika-225x300.png",
+      "local": "/assets/media/2024/01/slika-225x300.png"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2024/07/TA-RA-eLTER-in-Slovenia-2019.pdf",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2024/07/TA-RA-eLTER-in-Slovenia-2019.pdf",
+      "local": "/assets/media/2024/07/TA-RA-eLTER-in-Slovenia-2019.pdf"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/PO-PL-site-edited-1.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/PO-PL-site-edited-1.jpg",
+      "local": "/assets/media/2021/08/PO-PL-site-edited-1.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-edited-1.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-edited-1.jpeg",
+      "local": "/assets/media/2021/08/image-edited-1.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/podgorski-kras-slovenia_4463-edited-3.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/podgorski-kras-slovenia_4463-edited-3.jpg",
+      "local": "/assets/media/2021/08/podgorski-kras-slovenia_4463-edited-3.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/cerknica-lake-slovenia_6269-edited.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/cerknica-lake-slovenia_6269-edited.jpg",
+      "local": "/assets/media/2021/08/cerknica-lake-slovenia_6269-edited.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/8_Borovec_SFI_site-edited.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/8_Borovec_SFI_site-edited.jpg",
+      "local": "/assets/media/2021/08/8_Borovec_SFI_site-edited.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/7_Brdo_SFI_site-edited.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/7_Brdo_SFI_site-edited.jpg",
+      "local": "/assets/media/2021/08/7_Brdo_SFI_site-edited.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/5_Fondek_SFI_site-edited.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/5_Fondek_SFI_site-edited.jpg",
+      "local": "/assets/media/2021/08/5_Fondek_SFI_site-edited.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-9-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-9-edited.jpeg",
+      "local": "/assets/media/2021/08/image-9-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-1-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-1-edited.jpeg",
+      "local": "/assets/media/2021/08/image-1-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-2-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-2-edited.jpeg",
+      "local": "/assets/media/2021/08/image-2-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-3-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-3-edited.jpeg",
+      "local": "/assets/media/2021/08/image-3-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-4-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-4-edited.jpeg",
+      "local": "/assets/media/2021/08/image-4-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-5-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-5-edited.jpeg",
+      "local": "/assets/media/2021/08/image-5-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-8-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-8-edited.jpeg",
+      "local": "/assets/media/2021/08/image-8-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-6-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-6-edited.jpeg",
+      "local": "/assets/media/2021/08/image-6-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-7-edited.jpeg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/08/image-7-edited.jpeg",
+      "local": "/assets/media/2021/08/image-7-edited.jpeg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/LTER-Slovenia-1-1024x682.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/LTER-Slovenia-1-1024x682.jpg",
+      "local": "/assets/media/2021/06/LTER-Slovenia-1-1024x682.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/ZRC-SAZU-3-1-1024x325.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/ZRC-SAZU-3-1-1024x325.jpg",
+      "local": "/assets/media/2022/05/ZRC-SAZU-3-1-1024x325.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/LOGO_NIB_RGB-1024x122.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/LOGO_NIB_RGB-1024x122.jpg",
+      "local": "/assets/media/2022/05/LOGO_NIB_RGB-1024x122.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/University-of-Ljubljana-logo-1024x462.png",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/University-of-Ljubljana-logo-1024x462.png",
+      "local": "/assets/media/2022/05/University-of-Ljubljana-logo-1024x462.png"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/Park-Skocjanske-jame.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/Park-Skocjanske-jame.jpg",
+      "local": "/assets/media/2022/05/Park-Skocjanske-jame.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/Prirodoslovni-muzej-Slovenije.png",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/Prirodoslovni-muzej-Slovenije.png",
+      "local": "/assets/media/2022/05/Prirodoslovni-muzej-Slovenije.png"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/Jamski-laboratorij-TULAR.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/Jamski-laboratorij-TULAR.jpg",
+      "local": "/assets/media/2022/05/Jamski-laboratorij-TULAR.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/UniversityMaribor-e1653458874650.png",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2022/05/UniversityMaribor-e1653458874650.png",
+      "local": "/assets/media/2022/05/UniversityMaribor-e1653458874650.png"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/09/new-eLTER-PLUS-1.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/09/new-eLTER-PLUS-1.jpg",
+      "local": "/assets/media/2021/09/new-eLTER-PLUS-1.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/09/new-eLTER-PPP-1.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/09/new-eLTER-PPP-1.jpg",
+      "local": "/assets/media/2021/09/new-eLTER-PPP-1.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/H2020.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/H2020.jpg",
+      "local": "/assets/media/2021/06/H2020.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/ELTER-RI-1024x714.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/ELTER-RI-1024x714.jpg",
+      "local": "/assets/media/2021/06/ELTER-RI-1024x714.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2025/02/image001.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2025/02/image001.jpg",
+      "local": "/assets/media/2025/02/image001.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Croaticus.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Croaticus.jpg",
+      "local": "/assets/media/2021/06/Croaticus.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Leptodirus_hochenwartii_reticulatus.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Leptodirus_hochenwartii_reticulatus.jpg",
+      "local": "/assets/media/2021/06/Leptodirus_hochenwartii_reticulatus.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Proteus_anguinus_anguinus.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Proteus_anguinus_anguinus.jpg",
+      "local": "/assets/media/2021/06/Proteus_anguinus_anguinus.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Netopir-680x1024.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Netopir-680x1024.jpg",
+      "local": "/assets/media/2021/06/Netopir-680x1024.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Cerkvenik-714x1024.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Cerkvenik-714x1024.jpg",
+      "local": "/assets/media/2021/06/Cerkvenik-714x1024.jpg"
+    },
+    {
+      "source": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Plan.jpg",
+      "fetchedFrom": "https://lter.zrc-sazu.si/wp-content/uploads/2021/06/Plan.jpg",
+      "local": "/assets/media/2021/06/Plan.jpg"
+    }
+  ]
+}

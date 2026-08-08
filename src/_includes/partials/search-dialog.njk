@@ -1,0 +1,37 @@
+<dialog class="search-dialog" data-search-dialog aria-labelledby="search-title"
+  data-results-one="{{ 'page found' if activeLang == 'en' else 'najdena stran' }}"
+  data-results-two="{{ 'pages found' if activeLang == 'en' else 'najdeni strani' }}"
+  data-results-few="{{ 'pages found' if activeLang == 'en' else 'najdene strani' }}"
+  data-results-other="{{ 'pages found' if activeLang == 'en' else 'najdenih strani' }}">
+  <div class="search-dialog__panel">
+    <div class="search-dialog__header">
+      <div>
+        <p class="eyebrow">{{ 'Explore the network' | t(activeLang, 'search.eyebrow') }}</p>
+        <h2 id="search-title">{{ 'Search LTER Slovenia' | t(activeLang, 'search.title') }}</h2>
+      </div>
+      <button class="icon-button" type="button" data-search-close aria-label="{{ 'Close search' | t(activeLang, 'search.closeAriaLabel') }}">{% icon "close" %}</button>
+    </div>
+    <label class="search-field">
+      <span class="visually-hidden">{{ 'Search pages' | t(activeLang, 'search.fieldLabel') }}</span>
+      {% icon "search" %}
+      <input type="search" placeholder="{{ 'Try “karst”, “publications” or “sites”' | t(activeLang, 'search.placeholder') }}" autocomplete="off" data-site-search>
+      <kbd>Esc</kbd>
+    </label>
+    <p class="search-status" aria-live="polite" data-search-status>{{ 'Browse all pages' | t(activeLang, 'search.browseAllPages') }}</p>
+    <div class="search-results" data-search-results>
+      <a class="search-result" href="{{ '/' | localeUrl(activeLang) | url }}" data-search-item data-search-text="{{ 'home mission ecosystem research slovenia' | t(activeLang, 'search.homeSearchText') }}">
+        <span>{{ 'Home' | t(activeLang, 'search.homeResultTitle') }}</span><small>{{ 'Overview' | t(activeLang, 'search.homeResultSection') }}</small>{% icon "arrow", "icon--small" %}
+      </a>
+      {% for searchItem in localizedPages %}
+        {% if searchItem.langCode == activeLang and not site.aliasTargets[searchItem.slug] %}
+        <a class="search-result" href="{{ searchItem.route | url }}" data-search-item data-search-text="{{ searchItem.title }} {{ searchItem.excerpt }}">
+          <span>{{ searchItem.title }}</span>
+          <small>{{ activeSite.sectionBySlug[searchItem.slug] or searchItem.type }}</small>
+          {% icon "arrow", "icon--small" %}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <p class="search-empty" data-search-empty hidden>{{ 'No matching pages. Try a broader search.' | t(activeLang, 'search.empty') }}</p>
+  </div>
+</dialog>

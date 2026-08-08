@@ -1,0 +1,61 @@
+<header class="site-header" data-site-header>
+  <div class="utility-bar">
+    <div class="shell utility-bar__inner">
+      <p>{{ 'Slovenian national research infrastructure' | t(activeLang, 'navigation.utilityInfrastructure') }}</p>
+      <div class="utility-bar__actions">
+        <a href="https://elter-ri.eu/" target="_blank" rel="noopener">
+          {{ 'Part of the European eLTER network' | t(activeLang, 'navigation.utilityEuropeanNetwork') }}
+          {% icon "external", "icon--small" %}
+        </a>
+        <nav class="language-switcher" aria-label="Language / Jezik">
+          <a href="{{ activeEnglishPath | url }}" lang="en" hreflang="en"{% if activeLang == 'en' %} aria-current="true"{% endif %}>EN</a>
+          <span aria-hidden="true">/</span>
+          <a href="{{ activeSlovenianPath | url }}" lang="sl" hreflang="sl"{% if activeLang == 'sl' %} aria-current="true"{% endif %}>SL</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="nav-shell shell">
+    <a class="brand" href="{{ '/' | localeUrl(activeLang) | url }}" aria-label="{{ 'LTER Slovenia home' | t(activeLang, 'navigation.brandHomeAriaLabel') }}">
+      <img src="{{ activeSite.logo | url }}" alt="{{ activeSite.name }}" width="2869" height="1024">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+      {% icon "menu", "nav-toggle__menu" %}
+      {% icon "close", "nav-toggle__close" %}
+      <span>{{ 'Menu' | t(activeLang, 'navigation.menu') }}</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-navigation" aria-label="{{ 'Primary navigation' | t(activeLang, 'navigation.primaryNavigationAriaLabel') }}" data-primary-nav>
+      <ul class="nav-list" role="list">
+        {% for navItem in activeSite.navigation %}
+          <li class="nav-list__item">
+            {% if navItem.items %}
+              <details class="nav-group">
+                <summary>{{ navItem.label }} {% icon "chevron", "nav-chevron" %}</summary>
+                <ul class="nav-dropdown" role="list">
+                  {% for child in navItem.items %}
+                    <li>
+                      <a href="{{ child.url | url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.label }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </details>
+            {% else %}
+              <a href="{{ navItem.url | url }}"{% if page.url == navItem.url %} aria-current="page"{% endif %}>{{ navItem.label }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      <button class="search-button" type="button" data-search-open aria-label="{{ 'Search this site' | t(activeLang, 'navigation.searchSiteAriaLabel') }}">
+        {% icon "search" %}
+        <span class="search-button__label">{{ 'Search' | t(activeLang, 'navigation.search') }}</span>
+        <kbd>/</kbd>
+      </button>
+      <nav class="language-switcher language-switcher--mobile" aria-label="Language / Jezik">
+        <a href="{{ activeEnglishPath | url }}" lang="en" hreflang="en"{% if activeLang == 'en' %} aria-current="true"{% endif %}>English</a>
+        <a href="{{ activeSlovenianPath | url }}" lang="sl" hreflang="sl"{% if activeLang == 'sl' %} aria-current="true"{% endif %}>Slovenščina</a>
+      </nav>
+    </nav>
+  </div>
+</header>

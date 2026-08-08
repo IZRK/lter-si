@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languageCodes
+  size: 1
+  alias: langCode
+permalink: "{{ '/404.html' if langCode == 'en' else '/sl/404.html' }}"
+eleventyExcludeFromCollections: true
+bodyClass: page-error
+robots: noindex, nofollow
+eleventyComputed:
+  title: "{{ 'Page not found' | t(langCode, 'notFound.title') }}"
+  description: "{{ 'The requested LTER Slovenia page could not be found.' | t(langCode, 'notFound.description') }}"
+  canonicalPath: "{{ '/404.html' if langCode == 'en' else '/sl/404.html' }}"
+  englishPath: "/404.html"
+  slovenianPath: "/sl/404.html"
+---
+
+<section class="error-page" aria-labelledby="error-title">
+  <p class="eyebrow">{{ 'Error 404' | t(langCode, 'notFound.eyebrow') }}</p>
+  <h1 id="error-title">{{ 'This trail ends here.' | t(langCode, 'notFound.heading') }}</h1>
+  <p>{{ 'The page may have moved, or the address may be incomplete. Return to the LTER Slovenia homepage to continue exploring the network.' | t(langCode, 'notFound.summary') }}</p>
+  <a class="button button--primary" href="{{ '/' | localeUrl(langCode) }}">{{ 'Return to the homepage' | t(langCode, 'notFound.returnHome') }}</a>
+</section>

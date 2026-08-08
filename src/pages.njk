@@ -1,0 +1,255 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: localizedPages
+  size: 1
+  alias: item
+  addAllPagesToCollections: true
+permalink: "{{ item.route }}"
+eleventyComputed:
+  title: "{{ item.title }}"
+  description: "{{ localizedSite[item.langCode].pageDescriptions[item.slug] or item.excerpt or localizedSite[item.langCode].description }}"
+  ogImage: "{{ item.featuredImage or site.defaultImage }}"
+  ogImageAlt: "{{ item.title if item.featuredImage else localizedSite[item.langCode].defaultImageAlt }}"
+  canonicalPath: "{{ item.canonicalPath }}"
+  robots: "{{ item.robots }}"
+  langCode: "{{ item.langCode }}"
+  englishPath: "{{ item.englishPath }}"
+  slovenianPath: "{{ item.slovenianPath }}"
+  bodyClass: "page page--{{ item.slug }}"
+---
+{% set pageSite = localizedSite[item.langCode] %}
+{% set pageNetwork = localizedNetwork[item.langCode] %}
+<header class="page-hero">
+  <div class="shell page-hero__inner">
+    <div class="page-hero__copy">
+      <nav class="breadcrumbs" aria-label="{{ 'Breadcrumb' | t(item.langCode, 'common.breadcrumbAriaLabel') }}">
+        <a href="{{ '/' | localeUrl(item.langCode) | url }}">{{ 'Home' | t(item.langCode, 'common.home') }}</a>
+        <span aria-hidden="true">/</span>
+        <span>{{ pageSite.sectionBySlug[item.slug] or pageSite.name }}</span>
+      </nav>
+      <p class="eyebrow eyebrow--light">{{ pageSite.sectionBySlug[item.slug] or pageSite.name }}</p>
+      <h1>{{ title }}</h1>
+      <p class="page-hero__summary">{{ pageSite.pageDescriptions[item.slug] or item.excerpt }}</p>
+      {% if item.type == "post" %}
+        <p class="page-hero__meta">{{ 'Published' | t(item.langCode, 'common.publishedPrefix') }} {{ item.date | readableDate(item.langCode) }}</p>
+      {% endif %}
+    </div>
+    <div class="page-hero__texture" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+{% if item.slug == "sites-2" %}
+  <section class="section section--wide" id="sites">
+    <div class="shell">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="eyebrow">{{ 'From below ground to open water' | t(item.langCode, 'pages.sites.eyebrow') }}</p>
+          <h2>{{ 'Sixteen places, one long view' | t(item.langCode, 'pages.sites.title') }}</h2>
+        </div>
+        <p>{{ 'Each card opens the site’s DEIMS record with research context, location and observation details.' | t(item.langCode, 'pages.sites.summary') }}</p>
+      </div>
+      <div class="filter-bar" aria-label="{{ 'Filter research sites' | t(item.langCode, 'pages.sites.filterAriaLabel') }}">
+        <span>{{ 'Show' | t(item.langCode, 'pages.sites.show') }}</span>
+        <button class="filter-chip is-active" type="button" data-site-filter="all" aria-pressed="true">{{ 'All 16' | t(item.langCode, 'pages.sites.all') }}</button>
+        <button class="filter-chip" type="button" data-site-filter="karst" aria-pressed="false">{{ 'Karst' | t(item.langCode, 'pages.sites.karst') }}</button>
+        <button class="filter-chip" type="button" data-site-filter="forest" aria-pressed="false">{{ 'Forest' | t(item.langCode, 'pages.sites.forest') }}</button>
+        <button class="filter-chip" type="button" data-site-filter="freshwater" aria-pressed="false">{{ 'Freshwater' | t(item.langCode, 'pages.sites.freshwater') }}</button>
+        <button class="filter-chip" type="button" data-site-filter="marine" aria-pressed="false">{{ 'Marine' | t(item.langCode, 'pages.sites.marine') }}</button>
+      </div>
+      <div class="site-grid" data-site-grid>
+        {% for researchSite in pageNetwork.sites %}
+          <article class="site-card" data-site-card data-ecosystem="{{ network.sites[loop.index0].ecosystem | lower }}">
+            <a href="{{ researchSite.url }}" target="_blank" rel="noopener" aria-label="{{ ('View ' + researchSite.name + ' in DEIMS') if item.langCode == 'en' else ('Odpri območje ' + researchSite.name + ' v zbirki DEIMS') }}">
+              <div class="site-card__image">
+                <img src="{{ researchSite.image | url }}" alt="{{ researchSite.name + ' research site' if item.langCode == 'en' else 'Raziskovalno območje ' + researchSite.name }}" loading="lazy" width="800" height="800">
+                <span class="site-card__index">{{ loop.index }}</span>
+              </div>
+              <div class="site-card__body">
+                <p>{{ researchSite.ecosystem }}</p>
+                <h3>{{ researchSite.name }}</h3>
+                <span>{{ 'View DEIMS record' | t(item.langCode, 'pages.sites.viewDeimsRecord') }} {% icon "external", "icon--small" %}</span>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% elseif item.slug == "consortium" %}
+  <section class="section">
+    <div class="shell shell--reading">
+      <div class="lede-block">
+        <p class="eyebrow">{{ 'Shared capacity' | t(item.langCode, 'pages.consortium.eyebrow') }}</p>
+        <h2>{{ 'Research works better together.' | t(item.langCode, 'pages.consortium.title') }}</h2>
+        <p>{{ 'The national consortium spans research institutes, universities, a regional park, a national museum and a specialist cave laboratory.' | t(item.langCode, 'pages.consortium.summary') }}</p>
+      </div>
+    </div>
+    <div class="shell partner-grid">
+      {% for partner in pageNetwork.partners %}
+        <a class="partner-card" href="{{ partner.url }}" target="_blank" rel="noopener">
+          <div class="partner-card__logo">
+            {% if partner.logo %}
+              <img src="{{ partner.logo | url }}" alt="{{ 'Logotip ' + partner.short if item.langCode == 'sl' else partner.short + ' logo' }}" loading="lazy" width="{{ partner.width }}" height="{{ partner.height }}">
+            {% else %}
+              <span aria-hidden="true">{{ partner.short }}</span>
+            {% endif %}
+          </div>
+          <div>
+            <p>{{ partner.short }}</p>
+            <h3>{{ partner.name }}</h3>
+          </div>
+          {% icon "external", "partner-card__icon" %}
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+{% elseif item.slug == "projects" %}
+  <section class="section">
+    <div class="shell project-grid">
+      {% for project in pageNetwork.projects %}
+        <a class="project-card" href="{{ project.url | url }}">
+          <div class="project-card__image"><img src="{{ project.image | url }}" alt="{{ 'Grafika projekta ' + project.name if item.langCode == 'sl' else project.name + ' project graphic' }}" loading="lazy" width="{{ project.width }}" height="{{ project.height }}"></div>
+          <div class="project-card__body">
+            <p class="eyebrow">{{ project.eyebrow }}</p>
+            <h2>{{ project.name }}</h2>
+            <span>{{ 'Explore project' | t(item.langCode, 'pages.projects.explore') }} {% icon "arrow", "icon--small" %}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+{% elseif item.slug == "ta-ra-access-scheme" %}
+  <section class="section">
+    <div class="shell access-grid">
+      <a class="access-card access-card--2017" href="{{ '/ta-ra-2017/' | localeUrl(item.langCode) | url }}">
+        <p class="eyebrow">{{ 'Research visit' | t(item.langCode, 'pages.access.researchVisit') }}</p>
+        <p class="access-card__year">2017</p>
+        <h2>{{ 'Field and laboratory work' | t(item.langCode, 'pages.access.visit2017Title') }}</h2>
+        <p>{{ 'Hosted for Dr. Sanda Iepure of the “Emil Racovita” Speleological Institute in Cluj-Napoca.' | t(item.langCode, 'pages.access.visit2017Summary') }}</p>
+        <span>{{ 'Visit overview' | t(item.langCode, 'pages.access.visitOverview') }} {% icon "arrow", "icon--small" %}</span>
+      </a>
+      <a class="access-card access-card--2019" href="{{ '/ta-ra-2019/' | localeUrl(item.langCode) | url }}">
+        <p class="eyebrow">{{ 'Research visit' | t(item.langCode, 'pages.access.researchVisit') }}</p>
+        <p class="access-card__year">2019</p>
+        <h2>{{ 'Cave invertebrate diversity' | t(item.langCode, 'pages.access.visit2019Title') }}</h2>
+        <p>{{ 'A 12-day visit across the Postojna–Planina Cave System and Škocjan Caves.' | t(item.langCode, 'pages.access.visit2019Summary') }}</p>
+        <span>{{ 'Visit overview' | t(item.langCode, 'pages.access.visitOverview') }} {% icon "arrow", "icon--small" %}</span>
+      </a>
+    </div>
+  </section>
+
+{% elseif item.slug == "contact" %}
+  <section class="section">
+    <div class="shell contact-layout">
+      <div class="contact-card">
+        <p class="eyebrow">{{ 'National representative' | t(item.langCode, 'pages.contact.nationalRepresentative') }}</p>
+        <h2>{{ pageSite.contact.name }}</h2>
+        <p>{{ pageSite.contact.role }}</p>
+        <p class="contact-card__institute">{{ 'Research Centre of the Slovenian Academy of Sciences and Arts' | t(item.langCode, 'pages.contact.parentInstitution') }}<br>{{ pageSite.contact.institute }}</p>
+        <div class="contact-actions">
+          <a href="mailto:{{ pageSite.contact.email }}">{% icon "mail" %}<span><small>{{ 'Email' | t(item.langCode, 'pages.contact.email') }}</small>{{ pageSite.contact.email }}</span></a>
+          <a href="tel:{{ pageSite.contact.phone | replace(' ', '') }}">{% icon "users" %}<span><small>{{ 'Phone' | t(item.langCode, 'pages.contact.phone') }}</small>{{ pageSite.contact.phoneDisplay }}</span></a>
+        </div>
+      </div>
+      <aside class="contact-aside">
+        <p class="eyebrow">{{ 'Coordination' | t(item.langCode, 'pages.contact.coordination') }}</p>
+        <h2>{{ 'Start a conversation.' | t(item.langCode, 'pages.contact.title') }}</h2>
+        <p>{{ 'For network, research-site or collaboration enquiries, contact the LTER Slovenia national representative.' | t(item.langCode, 'pages.contact.summary') }}</p>
+        <a class="button button--secondary" href="{{ pageSite.contact.social }}" target="_blank" rel="noopener">{{ 'Follow @LTER_Slovenia' | t(item.langCode, 'pages.contact.follow') }} {% icon "external", "icon--small" %}</a>
+      </aside>
+    </div>
+  </section>
+
+{% elseif item.slug == "media" %}
+  <section class="section film-section">
+    <div class="shell film-section__grid">
+      <div class="film-section__copy">
+        <p class="eyebrow">{{ 'Watch in the field' | t(item.langCode, 'pages.media.eyebrow') }}</p>
+        <h2>{{ 'Karst research at LTER Slovenia sites' | t(item.langCode, 'pages.media.title') }}</h2>
+        <p>{{ 'Visit the Postojna–Planina Cave System and Škocjan Caves, where long-term observation reveals how vulnerable underground ecosystems change.' | t(item.langCode, 'pages.media.summary') }}</p>
+        <p class="film-section__credit">{{ 'Produced and co-financed by the Karst Research Institute ZRC SAZU under the EU Horizon 2020 eLTER PPP and eLTER PLUS projects.' | t(item.langCode, 'pages.media.credit') }}</p>
+        <a class="text-link" href="{{ '/karst-research-at-lter-slovenia-sites/' | localeUrl(item.langCode) | url }}">{{ 'Read the field story' | t(item.langCode, 'pages.media.readFieldStory') }} {% icon "arrow", "icon--small" %}</a>
+      </div>
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/qk2kq5y_nek" title="{{ 'Karst research at LTER Slovenia sites' | t(item.langCode, 'pages.media.iframeTitle') }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+{% else %}
+  <section class="section content-section">
+    <div class="shell {% if item.slug == 'publications' or item.slug == 'events' or item.slug == 'news-events' %}shell--archive{% else %}shell--reading{% endif %}">
+      {% if item.slug == "publications" %}
+        <div class="archive-tools" data-archive-tools data-archive-type="publications"
+          data-results-one="{{ 'entry' if item.langCode == 'en' else 'zapis' }}"
+          data-results-two="{{ 'entries' if item.langCode == 'en' else 'zapisa' }}"
+          data-results-few="{{ 'entries' if item.langCode == 'en' else 'zapisi' }}"
+          data-results-other="{{ 'entries' if item.langCode == 'en' else 'zapisov' }}">
+          <label class="archive-search">{% icon "search" %}<span class="visually-hidden">{{ 'Search publications' | t(item.langCode, 'pages.archives.searchPublicationsLabel') }}</span><input type="search" placeholder="{{ 'Search 66 publications' | t(item.langCode, 'pages.archives.searchPublicationsPlaceholder') }}" data-archive-search></label>
+          <label class="archive-select"><span>{{ 'Year' | t(item.langCode, 'pages.archives.year') }}</span><select data-archive-year><option value="all">{{ 'All years' | t(item.langCode, 'pages.archives.allYears') }}</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option></select></label>
+          <p aria-live="polite" data-archive-status>66 {{ 'entries' if item.langCode == 'en' else 'zapisov' }}</p>
+        </div>
+      {% elseif item.slug == "events" %}
+        <div class="archive-tools" data-archive-tools data-archive-type="events"
+          data-results-one="{{ 'event' if item.langCode == 'en' else 'dogodek' }}"
+          data-results-two="{{ 'events' if item.langCode == 'en' else 'dogodka' }}"
+          data-results-few="{{ 'events' if item.langCode == 'en' else 'dogodki' }}"
+          data-results-other="{{ 'events' if item.langCode == 'en' else 'dogodkov' }}">
+          <label class="archive-search">{% icon "search" %}<span class="visually-hidden">{{ 'Search events' | t(item.langCode, 'pages.archives.searchEventsLabel') }}</span><input type="search" placeholder="{{ 'Search events' | t(item.langCode, 'pages.archives.searchEventsPlaceholder') }}" data-archive-search></label>
+          <p aria-live="polite" data-archive-status>49 {{ 'events' if item.langCode == 'en' else 'dogodkov' }}</p>
+        </div>
+      {% endif %}
+
+      {% if item.featuredImage %}
+        <figure class="post-feature">
+          <img src="{{ item.featuredImage | url }}" alt="{{ 'Karst research at LTER Slovenia sites' | t(item.langCode, 'pages.archives.postFeatureAlt') }}" width="1920" height="1080">
+        </figure>
+      {% endif %}
+
+      {% if not item.content %}
+        <div class="empty-state">
+          <span class="empty-state__mark">{% icon "leaf" %}</span>
+          {% if item.slug == "sites" %}
+            <p class="eyebrow">{{ 'Research sites' | t(item.langCode, 'pages.emptySites.eyebrow') }}</p>
+            <h2>{{ 'Explore the network’s 16 research sites.' | t(item.langCode, 'pages.emptySites.title') }}</h2>
+            <p>{{ 'Discover long-term observation across caves, forests, freshwater lakes and the Adriatic Sea.' | t(item.langCode, 'pages.emptySites.summary') }}</p>
+            <a class="button" href="{{ '/sites-2/' | localeUrl(item.langCode) | url }}">{{ 'Explore all 16 sites' | t(item.langCode, 'pages.emptySites.action') }} {% icon "arrow", "icon--small" %}</a>
+          {% elseif item.slug == "report" %}
+            <p class="eyebrow">{{ 'Access scheme' | t(item.langCode, 'pages.emptyReport.eyebrow') }}</p>
+            <h2>{{ 'Read the 2019 TA–RA field report.' | t(item.langCode, 'pages.emptyReport.title') }}</h2>
+            <p>{{ 'Review the field and laboratory activities completed during the Transnational and Remote Access research visit.' | t(item.langCode, 'pages.emptyReport.summary') }}</p>
+            <a class="button" href="{{ '/report-2/' | localeUrl(item.langCode) | url }}">{{ 'Open the 2019 report' | t(item.langCode, 'pages.emptyReport.action') }} {% icon "arrow", "icon--small" %}</a>
+          {% elseif item.slug == "testimonials" %}
+            <p class="eyebrow">{{ 'Research visits' | t(item.langCode, 'pages.emptyTestimonials.eyebrow') }}</p>
+            <h2>{{ 'A researcher’s view from the field.' | t(item.langCode, 'pages.emptyTestimonials.title') }}</h2>
+            <p>{{ 'Dr. Ioana Nae reflects on cave fieldwork, collaboration and the karst research community in Slovenia.' | t(item.langCode, 'pages.emptyTestimonials.summary') }}</p>
+            <a class="button" href="{{ '/ta-ra-2019/testimonials-2/' | localeUrl(item.langCode) | url }}">{{ 'Read the testimonial' | t(item.langCode, 'pages.emptyTestimonials.action') }} {% icon "arrow", "icon--small" %}</a>
+          {% else %}
+            <p class="eyebrow">{{ 'Stories & film' | t(item.langCode, 'pages.emptyMedia.eyebrow') }}</p>
+            <h2>{{ 'See LTER Slovenia research in the field.' | t(item.langCode, 'pages.emptyMedia.title') }}</h2>
+            <p>{{ 'Follow karst research below ground and explore stories from across the network.' | t(item.langCode, 'pages.emptyMedia.summary') }}</p>
+            <a class="button" href="{{ '/karst-research-at-lter-slovenia-sites/' | localeUrl(item.langCode) | url }}">{{ 'Watch and read' | t(item.langCode, 'pages.emptyMedia.action') }} {% icon "arrow", "icon--small" %}</a>
+          {% endif %}
+        </div>
+      {% else %}
+        <article class="entry-content" data-entry-content>
+          {{ item.content | privacyEmbed | safe }}
+        </article>
+      {% endif %}
+
+      {% if item.type == "post" %}
+        <aside class="source-note">
+          <span>{% icon "leaf" %}</span>
+          <p><strong>{{ 'Explore the places behind the research' | t(item.langCode, 'pages.postCallout.title') }}</strong>{{ 'Discover long-term observation sites across Slovenia.' | t(item.langCode, 'pages.postCallout.summary') }}</p>
+          <a href="{{ '/sites-2/' | localeUrl(item.langCode) | url }}">{{ 'Explore research sites' | t(item.langCode, 'pages.postCallout.action') }} {% icon "arrow", "icon--small" %}</a>
+        </aside>
+      {% endif %}
+    </div>
+  </section>
+{% endif %}

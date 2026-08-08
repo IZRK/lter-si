@@ -1,0 +1,50 @@
+{% set activeLang = langCode or "en" %}
+{% set activeSite = localizedSite[activeLang] %}
+{% set metaTitle = title + " — " + activeSite.name if title and title != activeSite.name else activeSite.name + " — " + activeSite.metaTitleSuffix %}
+{% set metaDescription = description or activeSite.description %}
+{% set metaImage = ogImage or activeSite.defaultImage %}
+{% set canonicalUrl = canonicalPath or page.url %}
+{% set activeEnglishPath = englishPath or page.url %}
+{% set activeSlovenianPath = slovenianPath or ("/sl" + page.url) %}
+<!doctype html>
+<html lang="{{ activeSite.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ metaTitle }}</title>
+  <meta name="description" content="{{ metaDescription }}">
+  {% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
+  <meta name="theme-color" content="#17342f">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="{{ canonicalUrl | absoluteUrl(activeSite.url) }}">
+  {% if not robots or "noindex" not in robots %}
+  <link rel="alternate" hreflang="en" href="{{ activeEnglishPath | absoluteUrl(activeSite.url) }}">
+  <link rel="alternate" hreflang="sl" href="{{ activeSlovenianPath | absoluteUrl(activeSite.url) }}">
+  <link rel="alternate" hreflang="x-default" href="{{ activeEnglishPath | absoluteUrl(activeSite.url) }}">
+  {% endif %}
+  <link rel="icon" href="{{ activeSite.favicon | url }}" sizes="192x192">
+  <link rel="alternate" type="application/atom+xml" title="{{ activeSite.name }} {{ 'updates' | t(activeLang, 'meta.feedTitleSuffix') }}" href="{{ ('/feed.xml' if activeLang == 'en' else '/sl/feed.xml') | url }}">
+  <meta property="og:type" content="{{ 'article' if item and item.type == 'post' else 'website' }}">
+  <meta property="og:locale" content="{{ activeSite.locale }}">
+  <meta property="og:locale:alternate" content="{{ activeSite.alternateLocale }}">
+  <meta property="og:site_name" content="{{ activeSite.name }}">
+  <meta property="og:title" content="{{ metaTitle }}">
+  <meta property="og:description" content="{{ metaDescription }}">
+  <meta property="og:url" content="{{ canonicalUrl | absoluteUrl(activeSite.url) }}">
+  <meta property="og:image" content="{{ metaImage | absoluteUrl(activeSite.url) }}">
+  <meta property="og:image:alt" content="{{ ogImageAlt or activeSite.defaultImageAlt }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+  <script type="application/ld+json">{{ activeSite.organizationSchema | safe }}</script>
+</head>
+<body class="{{ bodyClass or 'page' }}" data-lang="{{ activeLang }}">
+  <a class="skip-link" href="#main-content">{{ 'Skip to content' | t(activeLang, 'common.skipToContent') }}</a>
+  {% include "partials/header.njk" %}
+  <main id="main-content" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/search-dialog.njk" %}
+  <script src="{{ '/assets/js/site.js' | url }}" defer></script>
+</body>
+</html>

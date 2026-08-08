@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "lang": "sl",
+    "locale": "sl_SI",
+    "siteName": "LTER Slovenija",
+    "fullName": "Slovensko omrežje za dolgoročne ekološke raziskave",
+    "siteDescription": "Slovensko nacionalno omrežje za dolgoročne raziskave ekosistemov in družbeno-ekoloških sistemov na izbranih območjih.",
+    "metaTitleSuffix": "dolgoročne ekološke raziskave",
+    "feedTitleSuffix": "novice",
+    "defaultImageAlt": "Osvetljena brv v podzemni dvorani Škocjanskih jam"
+  },
+  "common": {
+    "home": "Domov",
+    "skipToContent": "Preskoči na vsebino",
+    "breadcrumbAriaLabel": "Navigacijska pot",
+    "publishedPrefix": "Objavljeno:",
+    "readStory": "Preberite zgodbo",
+    "researchSiteImageAltPattern": "Raziskovalno območje {{ name }}",
+    "projectGraphicAltPattern": "Grafika projekta {{ name }}",
+    "partnerLogoAltPattern": "Logotip {{ short }}"
+  },
+  "navigation": {
+    "utilityInfrastructure": "Slovenska nacionalna raziskovalna infrastruktura",
+    "utilityEuropeanNetwork": "Del evropskega omrežja eLTER",
+    "brandHomeAriaLabel": "Domača stran LTER Slovenija",
+    "menu": "Meni",
+    "primaryNavigationAriaLabel": "Glavna navigacija",
+    "searchSiteAriaLabel": "Iskanje po spletišču",
+    "search": "Išči",
+    "items": {
+      "about": "O nas",
+      "lterSlovenia": "LTER Slovenija",
+      "elterEsfri": "eLTER ESFRI",
+      "consortium": "Konzorcij",
+      "sites": "Raziskovalna območja",
+      "research": "Raziskave",
+      "publications": "Publikacije",
+      "projects": "Projekti",
+      "access": "Dostop",
+      "taRaAccessScheme": "Shema dostopa TA–RA",
+      "visit2017": "Obisk leta 2017",
+      "visit2019": "Obisk leta 2019",
+      "testimonial": "Izkušnja raziskovalke",
+      "report2019": "Poročilo za leto 2019",
+      "news": "Novice",
+      "events": "Dogodki",
+      "media": "Mediji",
+      "contact": "Kontakt"
+    }
+  },
+  "search": {
+    "eyebrow": "Raziščite omrežje",
+    "title": "Iskanje po LTER Slovenija",
+    "closeAriaLabel": "Zapri iskanje",
+    "fieldLabel": "Iskanje po straneh",
+    "placeholder": "Poskusite »kras«, »publikacije« ali »območja«",
+    "escapeKey": "Esc",
+    "browseAllPages": "Prebrskajte vse strani",
+    "homeResultTitle": "Domov",
+    "homeResultSection": "Pregled",
+    "homeSearchText": "domov poslanstvo ekosistem raziskave Slovenija",
+    "empty": "Ni zadetkov. Poskusite s splošnejšim iskalnim izrazom."
+  },
+  "footer": {
+    "brandCountry": "Slovenija",
+    "aboutNetwork": "O omrežju",
+    "exploreHeading": "Raziščite",
+    "networkHeading": "Omrežje",
+    "contactHeading": "Kontakt",
+    "researchSites": "Raziskovalna območja",
+    "research": "Raziskave",
+    "publications": "Publikacije",
+    "europeanProjects": "Evropski projekti",
+    "consortium": "Konzorcij",
+    "accessScheme": "Shema dostopa",
+    "news": "Novice",
+    "events": "Dogodki",
+    "feed": "Vir novic"
+  },
+  "sectionNames": {
+    "about": "Evropska infrastruktura",
+    "consortium": "Omrežje",
+    "contact": "Stopite v stik",
+    "elterH2020": "Evropski projekti",
+    "elterPlus": "Evropski projekti",
+    "elterPpp": "Evropski projekti",
+    "events": "Novice in dogodki",
+    "karstResearchAtLterSloveniaSites": "Zapisi s terena",
+    "lterSlovenia": "Omrežje",
+    "media": "Novice in dogodki",
+    "newsEvents": "Novice in dogodki",
+    "projects": "Evropski projekti",
+    "publications": "Rezultati raziskav",
+    "report": "Shema dostopa",
+    "report2": "Shema dostopa",
+    "research": "Raziskave",
+    "sites": "Raziskovalna območja",
+    "sites2": "Raziskovalna območja",
+    "taRa2017": "Shema dostopa",
+    "taRa2019": "Shema dostopa",
+    "taRaAccessScheme": "Shema dostopa",
+    "testimonials": "Shema dostopa",
+    "testimonials2": "Shema dostopa"
+  },
+  "pageTitles": {
+    "home": "Domov",
+    "about": "eLTER ESFRI",
+    "consortium": "Konzorcij",
+    "contact": "Kontakt",
+    "elterH2020": "eLTER H2020",
+    "elterPlus": "eLTER PLUS",
+    "elterPpp": "eLTER PPP",
+    "events": "Dogodki",
+    "karstResearchAtLterSloveniaSites": "Raziskovanje krasa na območjih LTER Slovenija",
+    "lterSlovenia": "O omrežju LTER Slovenija",
+    "media": "Mediji",
+    "newsEvents": "Novice",
+    "projects": "Projekti",
+    "publications": "Publikacije",
+    "report": "Poročilo",
+    "report2": "Poročilo o dejavnostih TA–RA 2019",
+    "research": "Raziskave",
+    "sites": "Raziskovalna območja",
+    "sites2": "Raziskovalna območja LTER Slovenija",
+    "taRa2017": "TA–RA 2017",
+    "taRa2019": "TA–RA 2019",
+    "taRaAccessScheme": "Shema dostopa TA–RA",
+    "testimonials": "Izkušnje udeležencev",
+    "testimonials2": "Pogled raziskovalke"
+  },
+  "pageDescriptions": {
+    "about": "Evropska raziskovalna infrastruktura, ki povezuje dolgoročne raziskave ekosistemov, kritičnih con in družbeno-ekoloških sistemov.",
+    "consortium": "Osem slovenskih partnerjev s področij raziskovanja, izobraževanja in varstva narave, povezanih prek ekosistemov in znanstvenih disciplin.",
+    "contact": "Kontakt nacionalne predstavnice in koordinacijske ustanove LTER Slovenija.",
+    "elterH2020": "Projekt eLTER H2020 in njegov prispevek k porazdeljeni evropski raziskovalni infrastrukturi za ekosisteme.",
+    "elterPlus": "Projekt eLTER PLUS, ki krepi celostne raziskave na evropskih območjih in platformah.",
+    "elterPpp": "Projekt pripravljalne faze eLTER za vzpostavitev trajnostne evropske raziskovalne infrastrukture.",
+    "events": "Arhiv srečanj, konferenc, forumov in spletnih seminarjev eLTER med letoma 2018 in 2025.",
+    "karstResearchAtLterSloveniaSites": "Kako nam dolgoročne raziskave Postojnsko-planinskega jamskega sistema in Škocjanskih jam pomagajo razumeti in varovati občutljive kraške sisteme.",
+    "lterSlovenia": "Nacionalno omrežje, ustanovljeno leta 2003, ki povezuje 16 dolgoročnih raziskovalnih območij in osem partnerskih ustanov.",
+    "media": "Filmi in zgodbe s terena iz raziskav v omrežju LTER Slovenija.",
+    "newsEvents": "Izbrane novice evropske in mednarodne skupnosti za dolgoročne raziskave ekosistemov.",
+    "projects": "Evropski projekti, ki podpirajo razvoj infrastrukture za dolgoročne raziskave ekosistemov.",
+    "publications": "Raziskovalne objave, konferenčni prispevki in drugi rezultati omrežja LTER Slovenija med letoma 2019 in 2025.",
+    "report": "Poročilo z raziskovalnega obiska v okviru nadnacionalnega in oddaljenega dostopa eLTER leta 2019.",
+    "report2": "Poročilo z raziskovalnega obiska v okviru nadnacionalnega in oddaljenega dostopa eLTER leta 2019.",
+    "research": "Tekoče in zaključene raziskave hidrologije, gozdnatih kraških vodonosnikov in dolgoročnega opazovanja ekosistemov.",
+    "sites": "Šestnajst slovenskih območij za dolgoročne raziskave ekosistemov v jamah, gozdovih, jezerih in Jadranskem morju.",
+    "sites2": "Šestnajst slovenskih območij za dolgoročne raziskave ekosistemov, od jam in gozdov do jezer in Jadranskega morja.",
+    "taRa2017": "Raziskovalni obisk v okviru nadnacionalnega in oddaljenega dostopa eLTER, ki ga je leta 2017 gostil Inštitut za raziskovanje krasa ZRC SAZU.",
+    "taRa2019": "Raziskovalni obisk leta 2019, posvečen raznovrstnosti jamskih nevretenčarjev v Postojnsko-planinskem jamskem sistemu in Škocjanskih jamah.",
+    "taRaAccessScheme": "Raziskovalni obiski, izvedeni v okviru sheme mobilnosti za nadnacionalni in oddaljeni dostop eLTER.",
+    "testimonials": "Udeleženkina izkušnja terenskega dela, sodelovanja in raziskovanja krasa med obiskom eLTER v Sloveniji.",
+    "testimonials2": "Dr. Ioana Nae o terenskem delu, sodelovanju in raziskovanju krasa med obiskom eLTER v Sloveniji."
+  },
+  "home": {
+    "title": "LTER Slovenija",
+    "description": "Slovensko nacionalno omrežje za dolgoročne raziskave ekosistemov in družbeno-ekoloških sistemov na 16 območjih.",
+    "hero": {
+      "eyebrow": "Dolgoročne raziskave · trajno znanje",
+      "headline": "Spremljamo spreminjanje ekosistemov",
+      "headlineEmphasis": "skozi čas.",
+      "lede": "Slovensko nacionalno omrežje za dolgoročne raziskave ekosistemov in družbeno-ekoloških sistemov na izbranih območjih – od kraškega podzemlja do gozdov, jezer in Jadranskega morja.",
+      "exploreSites": "Raziščite 16 raziskovalnih območij",
+      "meetNetwork": "Spoznajte omrežje",
+      "mainImageAlt": "Osvetljena brv v podzemni dvorani Škocjanskih jam",
+      "insetImageAlt": "Gozdna in kraška pokrajina pri Planini",
+      "imageCaption": "Škocjanske jame · Slovenija"
+    },
+    "mission": {
+      "eyebrow": "Naš namen",
+      "statement": "LTER Slovenija smo ustanovili, da bi povezali vire za družbeno-ekološke raziskave v Sloveniji ter okrepili mednarodno sodelovanje.",
+      "context": "Omrežje združuje več ustanov ob podpori Ministrstva za visoko šolstvo, znanost in inovacije Republike Slovenije. Naše temeljno poslanstvo je usklajevanje povezanih družbeno-ekoloških raziskav v Sloveniji: izvajamo lasten raziskovalni program in svoje delo usklajujemo s partnerji v tujini.",
+      "moreThanTwentyYears": "Več kot 20 let LTER Slovenija"
+    },
+    "ecosystems": {
+      "eyebrow": "Celosten pogled",
+      "title": "Eno omrežje. Štiri vrste ekosistemov.",
+      "summary": "Šestnajst raziskovalnih območij omogoča dolgoročno preučevanje biotske raznovrstnosti in ekosistemskih procesov v prostoru in času."
+    },
+    "featuredSites": {
+      "eyebrow": "Raziskave na terenu",
+      "title": "Spoznajte pokrajine, iz katerih prihajajo podatki.",
+      "viewAll": "Oglejte si vseh 16 območij"
+    },
+    "fieldStory": {
+      "label": "Zgodba s terena",
+      "eyebrow": "Raziskovanje krasa",
+      "title": "Dragoceni podatki iz ranljivega sveta.",
+      "summary": "Kraška območja odlikuje velika biotska raznovrstnost, pomembna pa so tudi kot zaloge pitne vode. Dolgoročno zbiranje podatkov je tam lahko zahtevno, zamudno in včasih življenjsko nevarno – zato šteje vsako opazovanje.",
+      "read": "Preberite zgodbo s terena",
+      "imageAlt": "Naslovni kader filma Raziskovanje krasa na območjih LTER Slovenija"
+    },
+    "film": {
+      "eyebrow": "Ogled filma",
+      "title": "Raziskovanje krasa na območjih LTER Slovenija",
+      "summary": "Film predstavlja Postojnsko-planinski jamski sistem in Škocjanske jame, območji dolgoročnih raziskav podzemnega krasa.",
+      "credit": "Film je produciral in sofinanciral Inštitut za raziskovanje krasa ZRC SAZU v okviru projektov EU Obzorje 2020 eLTER PPP in eLTER PLUS.",
+      "iframeTitle": "Raziskovanje krasa na območjih LTER Slovenija"
+    },
+    "pastEvent": {
+      "eyebrow": "Pretekli dogodek · junij 2025",
+      "title": "eLTER Science Conference 2025",
+      "summary": "Celostnemu pristopu k ekosistemski znanosti naproti · Tampere, Finska",
+      "viewConference": "Oglejte si konferenco",
+      "imageAlt": "eLTER Science Conference 2025, od 23. do 27. junija v Tampereju na Finskem"
+    },
+    "gallery": {
+      "eyebrow": "Utrinki s terena",
+      "title": "Življenje nad površjem in pod njim.",
+      "summary": "Dolgoročno opazovanje povezuje vrste, življenjska okolja in okoljske procese, ki bi jih sicer zlahka spregledali."
+    },
+    "callToAction": {
+      "eyebrow": "Povežite se z omrežjem",
+      "title": "Dolgoročna vprašanja zahtevajo dolgoročno sodelovanje.",
+      "summary": "Spoznajte konzorcij, preglejte rezultate raziskav ali se obrnite na nacionalno predstavnico.",
+      "meetPartners": "Spoznajte naše partnerje",
+      "contact": "Kontaktirajte LTER Slovenija"
+    }
+  },
+  "pages": {
+    "hero": {
+      "fallbackSection": "LTER Slovenija",
+      "publishedPrefix": "Objavljeno:"
+    },
+    "sites": {
+      "eyebrow": "Od podzemlja do odprtih voda",
+      "title": "Šestnajst območij, en dolgoročen pogled",
+      "summary": "Vsaka kartica odpre zapis DEIMS z opisom raziskav, lokacijo in podatki opazovanj.",
+      "filterAriaLabel": "Filtriranje raziskovalnih območij",
+      "show": "Prikaži",
+      "all": "Vseh 16",
+      "karst": "Kras",
+      "forest": "Gozd",
+      "freshwater": "Sladke vode",
+      "marine": "Morje",
+      "viewInDeimsAriaPattern": "Odpri območje {{ name }} v zbirki DEIMS",
+      "viewDeimsRecord": "Odpri zapis v DEIMS"
+    },
+    "consortium": {
+      "eyebrow": "Skupne zmogljivosti",
+      "title": "Skupaj raziskujemo bolje.",
+      "summary": "Nacionalni konzorcij povezuje raziskovalne inštitute, univerzi, regijski park, prirodoslovni muzej in specializiran jamski laboratorij."
+    },
+    "projects": {
+      "explore": "Raziščite projekt"
+    },
+    "access": {
+      "researchVisit": "Raziskovalni obisk",
+      "visit2017Title": "Terensko in laboratorijsko delo",
+      "visit2017Summary": "Gostili smo dr. Sando Iepure z Inštituta za speleologijo »Emil Racoviță« v Cluj-Napoci.",
+      "visit2019Title": "Raznovrstnost jamskih nevretenčarjev",
+      "visit2019Summary": "Dvanajstdnevni obisk Postojnsko-planinskega jamskega sistema in Škocjanskih jam.",
+      "visitOverview": "Pregled obiska"
+    },
+    "contact": {
+      "nationalRepresentative": "Nacionalna predstavnica",
+      "representativeRole": "Nacionalna predstavnica LTER Slovenija",
+      "parentInstitution": "Znanstvenoraziskovalni center Slovenske akademije znanosti in umetnosti",
+      "institute": "Inštitut za raziskovanje krasa ZRC SAZU",
+      "email": "E-pošta",
+      "phone": "Telefon",
+      "coordination": "Koordinacija",
+      "title": "Začnimo pogovor.",
+      "summary": "Za vprašanja o omrežju, raziskovalnih območjih ali sodelovanju se obrnite na nacionalno predstavnico LTER Slovenija.",
+      "follow": "Sledite @LTER_Slovenia"
+    },
+    "media": {
+      "eyebrow": "Oglejte si delo na terenu",
+      "title": "Raziskovanje krasa na območjih LTER Slovenija",
+      "summary": "Obiščite Postojnsko-planinski jamski sistem in Škocjanske jame, kjer dolgoročno opazovanje razkriva spremembe v občutljivih podzemnih ekosistemih.",
+      "credit": "Film je produciral in sofinanciral Inštitut za raziskovanje krasa ZRC SAZU v okviru projektov EU Obzorje 2020 eLTER PPP in eLTER PLUS.",
+      "readFieldStory": "Preberite zgodbo s terena",
+      "iframeTitle": "Raziskovanje krasa na območjih LTER Slovenija"
+    },
+    "archives": {
+      "searchPublicationsLabel": "Iskanje po publikacijah",
+      "searchPublicationsPlaceholder": "Preiščite 66 publikacij",
+      "year": "Leto",
+      "allYears": "Vsa leta",
+      "publicationsStatus": "66 zapisov",
+      "searchEventsLabel": "Iskanje po dogodkih",
+      "searchEventsPlaceholder": "Preiščite dogodke",
+      "eventsStatus": "49 dogodkov",
+      "postFeatureAlt": "Raziskovanje krasa na območjih LTER Slovenija"
+    },
+    "emptySites": {
+      "eyebrow": "Raziskovalna območja",
+      "title": "Raziščite 16 območij omrežja.",
+      "summary": "Spoznajte dolgoročna opazovanja v jamah, gozdovih, sladkovodnih jezerih in Jadranskem morju.",
+      "action": "Raziščite vseh 16 območij"
+    },
+    "emptyReport": {
+      "eyebrow": "Shema dostopa",
+      "title": "Preberite terensko poročilo TA–RA za leto 2019.",
+      "summary": "Preglejte terenske in laboratorijske dejavnosti, izvedene med raziskovalnim obiskom v okviru nadnacionalnega in oddaljenega dostopa.",
+      "action": "Odprite poročilo za leto 2019"
+    },
+    "emptyTestimonials": {
+      "eyebrow": "Raziskovalni obiski",
+      "title": "Pogled raziskovalke s terena.",
+      "summary": "Dr. Ioana Nae o jamskem terenskem delu, sodelovanju in skupnosti raziskovalcev krasa v Sloveniji.",
+      "action": "Preberite pričevanje"
+    },
+    "emptyMedia": {
+      "eyebrow": "Zgodbe in film",
+      "title": "Oglejte si raziskave LTER Slovenija na terenu.",
+      "summary": "Spremljajte raziskovanje kraškega podzemlja in odkrijte zgodbe iz celotnega omrežja.",
+      "action": "Oglejte si film in preberite zgodbo"
+    },
+    "postCallout": {
+      "title": "Raziščite območja v ozadju raziskav",
+      "summary": "Spoznajte območja dolgoročnega opazovanja po vsej Sloveniji.",
+      "action": "Raziščite raziskovalna območja"
+    }
+  },
+  "notFound": {
+    "title": "Strani ni mogoče najti",
+    "description": "Zahtevane strani LTER Slovenija ni bilo mogoče najti.",
+    "eyebrow": "Napaka 404",
+    "heading": "Tu se pot konča.",
+    "summary": "Stran je bila morda premaknjena ali pa naslov ni popoln. Vrnite se na domačo stran LTER Slovenija in nadaljujte raziskovanje omrežja.",
+    "returnHome": "Nazaj na domačo stran"
+  },
+  "authorArchive": {
+    "title": "Prispevki avtorja Žana Kafola",
+    "description": "Raziskovalne zgodbe, ki jih je za LTER Slovenija prispeval Žan Kafol.",
+    "breadcrumbSection": "Avtorji",
+    "eyebrow": "Avtor raziskovalnih vsebin",
+    "summary": "Raziskovalne zgodbe, prispevane za LTER Slovenija.",
+    "readStory": "Preberite zgodbo"
+  },
+  "categoryArchive": {
+    "title": "Zgodbe LTER Slovenija",
+    "description": "Zgodbe s terena in novice raziskovalnega omrežja LTER Slovenija.",
+    "breadcrumbSection": "Zgodbe",
+    "eyebrow": "Zapisi s terena",
+    "summary": "Zapisi s terena in raziskovalne zgodbe iz celotnega omrežja.",
+    "readStory": "Preberite zgodbo"
+  },
+  "network": {
+    "stats": {
+      "networkEstablished": "leto ustanovitve omrežja",
+      "researchSites": "raziskovalnih območij",
+      "partners": "partnerjev"
+    },
+    "realms": {
+      "undergroundKarst": {
+        "label": "Podzemni kras",
+        "description": "Jamski sistemi z izjemno biotsko raznovrstnostjo in svetovnim pomenom."
+      },
+      "forestPlatforms": {
+        "label": "Gozdna območja",
+        "description": "Kopenska opazovanja v raznolikih gozdnih pokrajinah Slovenije."
+      },
+      "freshwaterLakes": {
+        "label": "Sladkovodni jezeri",
+        "description": "Dolgoročne spremembe v dveh različnih jezerskih ekosistemih."
+      },
+      "marineSite": {
+        "label": "Morsko območje",
+        "description": "Opazovanje obalnega okolja v Tržaškem zalivu."
+      }
+    },
+    "ecosystemLabels": {
+      "undergroundKarst": "Podzemni kras",
+      "forestAndKarst": "Gozd in kras",
+      "freshwater": "Sladke vode",
+      "forest": "Gozd",
+      "marine": "Morje"
+    },
+    "projectEyebrows": {
+      "preparatoryPhase": "Pripravljalna faza",
+      "advancedCommunity": "Razvita raziskovalna skupnost",
+      "startingCommunity": "Nastajajoča raziskovalna skupnost"
+    },
+    "galleryAlts": {
+      "croaticus": "Dva prosojna jamska raka pod mikroskopom",
+      "leptodirusHochenwartii": "Jamski hrošč Leptodirus hochenwartii",
+      "proteusAnguinus": "Človeška ribica, Proteus anguinus, v podzemnem življenjskem okolju",
+      "bat": "Netopir med počitkom v jami",
+      "researcher": "Raziskovalec pri pregledu jamskega rova",
+      "planina": "Gozdna in kraška pokrajina pri Planini"
+    }
+  }
+}
