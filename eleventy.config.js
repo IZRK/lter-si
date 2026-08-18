@@ -13,7 +13,9 @@ const normalizePrefix = (value = "/") => {
 };
 
 export default function (eleventyConfig) {
-  const pathPrefix = normalizePrefix(process.env.PATH_PREFIX || "/");
+  const configuredSiteUrl = process.env.SITE_URL;
+  const sitePath = configuredSiteUrl ? new URL(configuredSiteUrl).pathname : "/";
+  const pathPrefix = normalizePrefix(process.env.PATH_PREFIX ?? sitePath);
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });

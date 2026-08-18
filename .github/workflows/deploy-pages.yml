@@ -39,7 +39,6 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          PATH_PREFIX: ${{ steps.pages.outputs.base_path }}
           SITE_URL: ${{ steps.pages.outputs.base_url }}
 
       - name: Upload Pages artifact

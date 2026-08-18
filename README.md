@@ -30,6 +30,6 @@ The Slovenian editorial translations live in `src/_data/slPagesA.json`, `src/_da
 
 ## GitHub Pages
 
-Pushes to `main` run the Pages deployment workflow. It gets the public URL and project-repository base path from GitHub Pages, builds with those values, and publishes `_site/`.
+Pushes to `main` run the Pages deployment workflow. It gets the public base URL from GitHub Pages and derives the path prefix from it, so the same build works at a project path such as `/lter-si/` and at a custom domain root. An explicit `PATH_PREFIX` can still override this for manual builds. The workflow publishes `_site/`.
 
 For the first deployment, choose **GitHub Actions** as the source in **Settings → Pages**. No `CNAME` is included; configuring the live `lter.zrc-sazu.si` domain requires an intentional DNS migration by its owner.
