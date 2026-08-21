@@ -36,7 +36,7 @@ const metadata = {
   },
   publications: {
     title: "Publikacije",
-    excerpt: "Raziskave, konferenčni prispevki in drugi rezultati mreže LTER Slovenija med letoma 2019 in 2025."
+    excerpt: "Raziskave, konferenčni prispevki in drugi rezultati mreže LTER Slovenija med letoma 2019 in 2026."
   },
   report: {
     title: "Poročilo",

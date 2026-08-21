@@ -13,7 +13,7 @@ const pageDescriptions = {
   media: "Films and field stories from research across the LTER Slovenia network.",
   "news-events": "Selected updates from the European and international long-term ecosystem research community.",
   projects: "European projects supporting the development of long-term ecosystem research infrastructure.",
-  publications: "Research, conference contributions and other outputs from the LTER Slovenia network, 2019–2025.",
+  publications: "Research, conference contributions and other outputs from the LTER Slovenia network, 2019–2026.",
   report: "Read or download the report from the 2019 eLTER Transnational and Remote Access research visit.",
   "report-2": "Download or read the report from the 2019 eLTER Transnational and Remote Access research visit.",
   research: "Current and completed research connected to hydrology, forested karst aquifers and long-term ecosystem observation.",

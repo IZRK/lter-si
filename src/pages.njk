@@ -191,9 +191,9 @@ eleventyComputed:
           data-results-two="{{ 'entries' if item.langCode == 'en' else 'zapisa' }}"
           data-results-few="{{ 'entries' if item.langCode == 'en' else 'zapisi' }}"
           data-results-other="{{ 'entries' if item.langCode == 'en' else 'zapisov' }}">
-          <label class="archive-search">{% icon "search" %}<span class="visually-hidden">{{ 'Search publications' | t(item.langCode, 'pages.archives.searchPublicationsLabel') }}</span><input type="search" placeholder="{{ 'Search 66 publications' | t(item.langCode, 'pages.archives.searchPublicationsPlaceholder') }}" data-archive-search></label>
-          <label class="archive-select"><span>{{ 'Year' | t(item.langCode, 'pages.archives.year') }}</span><select data-archive-year><option value="all">{{ 'All years' | t(item.langCode, 'pages.archives.allYears') }}</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option></select></label>
-          <p aria-live="polite" data-archive-status>66 {{ 'entries' if item.langCode == 'en' else 'zapisov' }}</p>
+          <label class="archive-search">{% icon "search" %}<span class="visually-hidden">{{ 'Search publications' | t(item.langCode, 'pages.archives.searchPublicationsLabel') }}</span><input type="search" placeholder="{{ 'Search 67 publications' | t(item.langCode, 'pages.archives.searchPublicationsPlaceholder') }}" data-archive-search></label>
+          <label class="archive-select"><span>{{ 'Year' | t(item.langCode, 'pages.archives.year') }}</span><select data-archive-year><option value="all">{{ 'All years' | t(item.langCode, 'pages.archives.allYears') }}</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option></select></label>
+          <p aria-live="polite" data-archive-status>67 {{ 'entries' if item.langCode == 'en' else 'zapisov' }}</p>
         </div>
       {% elseif item.slug == "events" %}
         <div class="archive-tools" data-archive-tools data-archive-type="events"
