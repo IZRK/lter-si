@@ -2,14 +2,14 @@ const siteUrl = (process.env.SITE_URL || "https://lter.zrc-sazu.si").replace(/\/
 
 const pageDescriptions = {
   about: "The European research infrastructure connecting long-term ecosystem, critical zone and socio-ecological research.",
-  consortium: "Eight Slovenian research, education and conservation partners working together across ecosystems and disciplines.",
+  consortium: "Nine Slovenian research, education and conservation partners working together across ecosystems and disciplines.",
   contact: "Contact the national representative and coordinating institute for LTER Slovenia.",
   "elter-h2020": "The eLTER H2020 project and its contribution to a distributed European ecosystem research infrastructure.",
   "elter-plus": "The eLTER PLUS project, strengthening whole-system research across European sites and platforms.",
   "elter-ppp": "The eLTER Preparatory Phase Project for a sustainable European research infrastructure.",
   events: "An archive of eLTER meetings, conferences, forums and webinars from 2018 to 2025.",
   "karst-research-at-lter-slovenia-sites": "How long-term research at Postojna–Planina and Škocjan Caves helps understand and protect vulnerable karst systems.",
-  "lter-slovenia": "A national network founded in 2003, connecting 16 long-term research sites and eight partner institutions.",
+  "lter-slovenia": "A national network founded in 2003, connecting 16 long-term research sites and nine partner institutions.",
   media: "Films and field stories from research across the LTER Slovenia network.",
   "news-events": "Selected updates from the European and international long-term ecosystem research community.",
   projects: "European projects supporting the development of long-term ecosystem research infrastructure.",

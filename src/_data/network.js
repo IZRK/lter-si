@@ -2,7 +2,7 @@ export default {
   stats: [
     { value: "2003", label: "network established" },
     { value: "16", label: "research sites" },
-    { value: "8", label: "partners" }
+    { value: "9", label: "partners" }
   ],
   sites: [
     { name: "Postojna–Planina Cave System", ecosystem: "Underground karst", image: "/assets/media/2021/08/PO-PL-site-edited-1.jpg", url: "https://deims.org/b5bcf1f8-b905-4190-bb82-12d0d73904d0" },
@@ -25,12 +25,13 @@ export default {
   partners: [
     { short: "ZRC SAZU", name: "Research Centre of the Slovenian Academy of Sciences and Arts", url: "https://www.zrc-sazu.si/en", logo: "/assets/media/2022/05/ZRC-SAZU-3-1-1024x325.jpg", width: 1024, height: 325 },
     { short: "NIB–MBP", name: "National Institute of Biology — Marine Biology Station Piran", url: "http://www.nib.si/eng/index.php/departments/marine-biology-station-piran", logo: "/assets/media/2022/05/LOGO_NIB_RGB-1024x122.jpg", width: 1024, height: 122 },
-    { short: "GIS", name: "Slovenian Forestry Institute", url: "https://www.gozdis.si/en/", logo: null },
+    { short: "GIS", name: "Slovenian Forestry Institute", url: "https://www.gozdis.si/en/", logo: "/assets/media/partners/gis.svg", width: 295.533, height: 68.907 },
     { short: "UL–BF", name: "University of Ljubljana — Biotechnical Faculty", url: "https://www.bf.uni-lj.si/en/", logo: "/assets/media/2022/05/University-of-Ljubljana-logo-1024x462.png", width: 1024, height: 462 },
     { short: "PSJ", name: "Škocjan Caves Park Public Service Agency", url: "https://www.park-skocjanske-jame.si/en", logo: "/assets/media/2022/05/Park-Skocjanske-jame.jpg", width: 625, height: 635 },
     { short: "PMS", name: "Slovenian Museum of Natural History", url: "https://www.pms-lj.si/en/", logo: "/assets/media/2022/05/Prirodoslovni-muzej-Slovenije.png", width: 800, height: 800 },
     { short: "TULAR", name: "Society for Cave Biology — TULAR Cave Laboratory", url: "https://www.tular.si/index.php/", logo: "/assets/media/2022/05/Jamski-laboratorij-TULAR.jpg", width: 900, height: 873 },
-    { short: "UM", name: "University of Maribor", url: "https://www.um.si/en/", logo: "/assets/media/2022/05/UniversityMaribor-e1653458874650.png", width: 214, height: 130 }
+    { short: "UM", name: "University of Maribor", url: "https://www.um.si/en/", logo: "/assets/media/2022/05/UniversityMaribor-e1653458874650.png", width: 214, height: 130 },
+    { short: "UNG", name: "University of Nova Gorica", url: "https://ung.si/en/", logo: "/assets/media/partners/ung.png", width: 102, height: 104 }
   ],
   projects: [
     { name: "eLTER PPP", eyebrow: "Preparatory phase", url: "/elter-ppp/", image: "/assets/media/2021/09/new-eLTER-PPP-1.jpg", width: 792, height: 631 },

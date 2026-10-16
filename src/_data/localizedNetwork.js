@@ -27,7 +27,8 @@ const partnerNames = {
   PSJ: "Javni zavod Park Škocjanske jame",
   PMS: "Prirodoslovni muzej Slovenije",
   TULAR: "Društvo za jamsko biologijo — Jamski laboratorij Tular",
-  UM: "Univerza v Mariboru"
+  UM: "Univerza v Mariboru",
+  UNG: "Univerza v Novi Gorici"
 };
 
 const projectEyebrows = [
@@ -50,7 +51,7 @@ const slNetwork = {
   stats: [
     { value: "2003", label: sl.network.stats.networkEstablished },
     { value: "16", label: sl.network.stats.researchSites },
-    { value: "8", label: sl.network.stats.partners }
+    { value: String(network.partners.length), label: sl.network.stats.partners }
   ],
   sites: network.sites.map((site) => ({
     ...site,
